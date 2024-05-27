@@ -31,6 +31,7 @@ const App = () => {
       setLoading(true);
       const queryParams = new URLSearchParams(filterValues).toString();
       const response = await axios.get(`http://localhost:5000/insights?${queryParams}`);
+
       if (response.data.length === 0) {
         setErrorMessage('No data found for the selected filters.');
       } else {
@@ -38,7 +39,9 @@ const App = () => {
         setFilteredData(response.data);
       }
       setLoading(false);
-    } catch (error) {
+
+    } 
+    catch (error) {
       console.error('Error applying filters:', error);
       setLoading(false);
     }
@@ -46,10 +49,12 @@ const App = () => {
 
   return (
     <div>
-      <h1>My Dashboard</h1>
+      <h1 className='heading'>My Dashboard</h1>
       <Filters applyFilters={applyFilters} />
       {loading ? (
-        <div>Loading...</div>
+        <div className='loader'>
+        <div className='spinner'></div>
+        </div>
       ) : (
         <div>
           {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}

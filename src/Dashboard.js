@@ -64,7 +64,7 @@ const Dashboard = ({ data }) => {
 
   return (
     <div style={{ width: '75%', margin: '0 auto' }}>
-      <h2 style={{textAlign:"center",fontSize: "2rem"}}>Dashboard View</h2>
+      <h2 style={{textAlign:"center",fontSize: "2rem"}}>Visualize view</h2>
       <Bar data={chartData} />
 
     </div>

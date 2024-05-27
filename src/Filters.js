@@ -81,7 +81,7 @@ const Filters = ({ applyFilters }) => {
         value={filterValues.swot}
         onChange={(e) => handleChange('swot', e.target.value)}
       />
-      {/* Add more input fields for other filter criteria */}
+      
       <button onClick={handleApplyFilters}>Apply Filters</button>
     </div>
   );

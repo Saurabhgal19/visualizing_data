@@ -10,7 +10,7 @@ const App = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
-    fetchData(); // Fetch initial data when the component mounts
+    fetchData(); 
   }, []);
 
   const fetchData = async () => {
@@ -25,21 +25,6 @@ const App = () => {
     }
   };
 
-  /*
-  const applyFilters = async (filterValues) => {
-    try {
-      setLoading(true);
-      const queryParams = new URLSearchParams(filterValues).toString();
-      const response = await axios.get(`http://localhost:5000/insights?${queryParams}`);
-      console.log(response);
-      setFilteredData(response.data);
-      setLoading(false);
-    } catch (error) {
-      console.error('Error applying filters:', error);
-      setLoading(false);
-    }
-  };
-  */
 
   const applyFilters = async (filterValues) => {
     try {

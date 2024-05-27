@@ -16,9 +16,7 @@ router.get('/', async (req, res) => {
         
         const filters = {};
 
-        //if (start_year) filters.start_year = start_year;
         if (start_year) filters.start_year = Number(start_year);
-        //if (end_year) filters.end_year = end_year;
         if (end_year) filters.end_year = Number(end_year);
         if (country) filters.country = country;
         if (topic) filters.topic = { $in: topic.split(',') };
